@@ -12,12 +12,11 @@ source:
 build:
   number: 1
   string: opencv_{{ opencv | replace(".", "") }}
-  #skip: true                         #[win]
+  skip: true                         #[win and vc9]
 
 requirements:
   build:
     - m2-patch                       # [win]
-    - vc>=14                         # [win]
     - cmake
     - ninja
     - {{ compiler("c") }}
