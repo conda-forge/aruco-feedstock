@@ -14,7 +14,7 @@ set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 
-cmake -LAH -G "Ninja"                                                               ^
+cmake -LAH -G "Visual Studio 14 2015 Win64"                                                               ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
     -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
