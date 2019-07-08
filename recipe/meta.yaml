@@ -12,7 +12,6 @@ source:
 build:
   number: 1
   string: opencv_{{ opencv | replace(".", "") }}
-
   #skip: true                         #[win]
 
 requirements:
@@ -30,10 +29,10 @@ requirements:
     - {{ cdt('libxxf86vm') }}        # [linux]
 
   host:
-    - opencv {{ opencv }}
+    - {{ pin_compatible('opencv', max_pin='x.x.x') }}
 
   run:
-    - opencv {{ opencv }}
+    - {{ pin_compatible('opencv', max_pin='x.x.x') }}
 
 test:
   requires:
