@@ -38,31 +38,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_opencv3.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=linux&configuration=linux_opencv3.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>linux_opencv4.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=linux&configuration=linux_opencv4.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008cxx_compilervs2008</td>
+              <td>osx_opencv3.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008cxx_compilervs2008" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=osx&configuration=osx_opencv3.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015</td>
+              <td>osx_opencv4.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=osx&configuration=osx_opencv4.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_c_compilervs2008cxx_compilervs2008opencv3.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008cxx_compilervs2008opencv3.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_c_compilervs2008cxx_compilervs2008opencv4.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008cxx_compilervs2008opencv4.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_c_compilervs2015cxx_compilervs2015opencv3.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015opencv3.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_c_compilervs2015cxx_compilervs2015opencv4.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015opencv4.1" alt="variant">
                 </a>
               </td>
             </tr>
