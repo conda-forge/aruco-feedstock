@@ -4,7 +4,6 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
-  string: opencv_{{ opencv | replace(".", "") }}
 
 source:
   url: https://downloads.sourceforge.net/project/aruco/{{ version }}/aruco-{{ version }}.zip
@@ -12,6 +11,8 @@ source:
 
 build:
   number: 1
+  string: opencv_{{ opencv | replace(".", "") }}
+
   #skip: true                         #[win]
 
 requirements:
