@@ -10,11 +10,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_opencv3.4:
-        CONFIG: osx_opencv3.4
-        UPLOAD_PACKAGES: True
-      osx_opencv4.1:
-        CONFIG: osx_opencv4.1
+      osx_:
+        CONFIG: osx_
         UPLOAD_PACKAGES: True
 
   steps:
