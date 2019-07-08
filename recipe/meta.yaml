@@ -12,7 +12,7 @@ source:
 build:
   number: 1
   string: opencv_{{ opencv | replace(".", "") }}
-  skip: true                        # [win and py27]
+  skip: true                        # [win]
 
 requirements:
   build:
