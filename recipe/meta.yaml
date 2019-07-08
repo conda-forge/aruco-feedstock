@@ -4,13 +4,15 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
+  string: opencv_{{ opencv | replace(".", "") }}
 
 source:
   url: https://downloads.sourceforge.net/project/aruco/{{ version }}/aruco-{{ version }}.zip
   sha256: 8d70856233f3271f672e8efa13ed83a9be30af357dca02220bcb329cb5fa9550
 
 build:
-  number: 0
+  number: 1
+  #skip: true                         #[win]
 
 requirements:
   build:
@@ -27,12 +29,15 @@ requirements:
     - {{ cdt('libxxf86vm') }}        # [linux]
 
   host:
-    - opencv >3.1
+    - opencv {{ opencv }}
 
   run:
-    - opencv >3.1
+    - opencv {{ opencv }}
 
 test:
+  requires:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   commands:
     - aruco_create_markermap 10:10 Image.png Configuration.yml
 

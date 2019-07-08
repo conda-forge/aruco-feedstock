@@ -18,8 +18,8 @@ cmake -LAH -G "Ninja"                                                           
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
     -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
-    -DCMAKE_OpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv  ^
-    -DCMAKE_OPENCV_FOUND=1                                                          ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOPENCV_FOUND=ON                                                               ^
     ..
 if errorlevel 1 exit 1
 cmake --build . --target install --config Release
