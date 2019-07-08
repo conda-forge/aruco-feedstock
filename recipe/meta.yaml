@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - m2-patch                       # [win]
+    - vc>=14                         # [win]
     - cmake
     - ninja
     - {{ compiler("c") }}
