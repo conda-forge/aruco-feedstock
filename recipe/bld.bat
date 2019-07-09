@@ -17,10 +17,7 @@ set UNIX_SRC_DIR=%SRC_DIR:\=/%
 cmake -LAH -G "Visual Studio 14 2015 Win64"                                                               ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
-    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
-    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
-    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
-    -DOpenCV_FOUND=ON                                                               ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^                                                          ^
     ..
 if errorlevel 1 exit 1
 cmake --build . --target install --config Release
