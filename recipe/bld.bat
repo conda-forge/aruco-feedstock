@@ -1,8 +1,6 @@
 @echo ON
 setlocal enabledelayedexpansion
 
-mkdir build
-cd build
 
 :: CMake/OpenCV like Unix-style paths for some reason.    
 set UNIX_PREFIX=%PREFIX:\=/%
@@ -16,6 +14,7 @@ set UNIX_SRC_DIR=%SRC_DIR:\=/%
 :: Display available generators
 cmake -G
 
+mkdir build1 && pushd build1
 :: Test with Ninja
 cmake -LAH -G "Ninja"                                                               ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
@@ -25,7 +24,11 @@ cmake -LAH -G "Ninja"                                                           
     -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
     -DOPENCV_FOUND=ON                                                               ^
     ..
+nmake --build . --target install --config Release
 
+popd
+
+mkdir build2 && pushd build2
 cmake -LAH -G "NMake Makefiles"                                                     ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
@@ -34,8 +37,13 @@ cmake -LAH -G "NMake Makefiles"                                                 
     -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
     -DOPENCV_FOUND=ON                                                               ^
     ..
+nmake
+
+popd
+
 
 :: Test basic configuration
+mkdir build3 && pushd build3
 cmake -LH -A "x64"                                                                  ^      
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
@@ -44,7 +52,10 @@ cmake -LH -A "x64"                                                              
     -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
     -DOpenCV_FOUND=ON                                                               ^
     ..
-if errorlevel 1 exit 1
 cmake --build . --target install --config Release
+
+popd
+
+if errorlevel 1 exit 1
 if errorlevel 1 exit 1
 
