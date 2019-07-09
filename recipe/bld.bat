@@ -13,14 +13,17 @@ set UNIX_LIBRARY_LIB=%LIBRARY_LIB:\=/%
 set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
+cmake -G
 
-cmake -LAH -G "Ninja"                                                               ^
+cmake -LAH -G "NMake Makefiles"      
+    -DCMAKE_VERBOSE_MAKEFILE=TRUE                                                   ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
     -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
-    -DCMAKE_OpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv  ^
-    -DCMAKE_OPENCV_FOUND=1                                                          ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOpenCV_FOUND=ON                                                               ^
     ..
 if errorlevel 1 exit 1
-cmake --build . --target install --config Release
+nmake --build . --target install --config Release
 if errorlevel 1 exit 1
