@@ -15,7 +15,7 @@ set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 cmake -G
 
-cmake -LAH -G "Visual Studio 15 2017 Win64"                                                               ^
+cmake -LAH -G "NMake Makefiles"                                                               ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
     -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
