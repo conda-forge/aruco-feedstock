@@ -15,7 +15,7 @@ set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 cmake -G
 
-cmake -LAH -G "NMake Makefiles"      
+cmake -LAH -G "NMake Makefiles"                                                     ^      
     -DCMAKE_VERBOSE_MAKEFILE=TRUE                                                   ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
