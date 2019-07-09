@@ -56,6 +56,49 @@ cmake --build . --target install --config Release
 
 popd
 
+
+:: Test basic configuration
+mkdir build4 && pushd build4
+cmake -LAH -G "Visual Studio 14 2015 Win64"                                                                  ^      
+    -DCMAKE_BUILD_TYPE="Release"                                                    ^
+    -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOpenCV_FOUND=ON                                                               ^
+    ..
+cmake --build . --target install --config Release
+
+popd
+
+:: Test basic configuration
+mkdir build5 && pushd build5
+cmake -LAH -G "Visual Studio 14 2015 Win64"                                                                  ^      
+    -DCMAKE_BUILD_TYPE="Release"                                                    ^
+    -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOpenCV_FOUND=ON                                                               ^
+    ..
+cmake --build . --target install --config Release
+
+popd
+
+:: Test basic configuration
+mkdir build6 && pushd build6
+cmake -LAH -G "Visual Studio 15 2017 Win64"                                                                  ^      
+    -DCMAKE_BUILD_TYPE="Release"                                                    ^
+    -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOpenCV_FOUND=ON                                                               ^
+    ..
+cmake --build . --target install --config Release
+
+
+
 if errorlevel 1 exit 1
 if errorlevel 1 exit 1
 
