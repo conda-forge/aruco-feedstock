@@ -15,7 +15,8 @@ set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
 cmake -G
 
-cmake -LAH -G "NMake Makefiles"                                                               ^
+cmake -LAH -G "NMake Makefiles"      
+    -DCMAKE_VERBOSE_MAKEFILE=TRUE                                                   ^
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
     -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
@@ -24,5 +25,5 @@ cmake -LAH -G "NMake Makefiles"                                                 
     -DOpenCV_FOUND=ON                                                               ^
     ..
 if errorlevel 1 exit 1
-cmake --build . --target install --config Release
+nmake --build . --target install --config Release
 if errorlevel 1 exit 1
