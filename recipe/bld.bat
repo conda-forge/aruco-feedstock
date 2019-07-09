@@ -13,8 +13,29 @@ set UNIX_LIBRARY_LIB=%LIBRARY_LIB:\=/%
 set UNIX_SP_DIR=%SP_DIR:\=/%
 set UNIX_SRC_DIR=%SRC_DIR:\=/%
 
+:: Display available generators
 cmake -G
 
+:: Test with Ninja
+cmake -LAH -G "Ninja"                                                               ^
+    -DCMAKE_BUILD_TYPE="Release"                                                    ^
+    -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOPENCV_FOUND=ON                                                               ^
+    ..
+
+cmake -LAH -G "NMake Makefiles"                                                     ^
+    -DCMAKE_BUILD_TYPE="Release"                                                    ^
+    -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
+    -DCMAKE_INSTALL_PREFIX=%UNIX_LIBRARY_PREFIX%                                    ^
+    -DOpenCV_INCLUDE_DIRS=%UNIX_PREFIX%/include;%UNIX_PREFIX%/include/opencv        ^
+    -DOpenCV_DIR=%UNIX_LIBRARY_INC%                                                 ^
+    -DOPENCV_FOUND=ON                                                               ^
+    ..
+
+:: Test basic configuration
 cmake -LH -A "x64"                                                                  ^      
     -DCMAKE_BUILD_TYPE="Release"                                                    ^
     -DCMAKE_PREFIX_PATH=%UNIX_LIBRARY_PREFIX%                                       ^
@@ -26,3 +47,4 @@ cmake -LH -A "x64"                                                              
 if errorlevel 1 exit 1
 cmake --build . --target install --config Release
 if errorlevel 1 exit 1
+
