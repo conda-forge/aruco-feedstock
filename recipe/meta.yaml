@@ -29,10 +29,12 @@ requirements:
     - {{ cdt('libxxf86vm') }}        # [linux]
 
   host:
-    - opencv {{ opencv }}
+    - opencv {{ opencv }}            # [not win]
+    - libopencv >                    # [win]
 
   run:
-    - {{ pin_compatible('opencv', max_pin='x.x') }}
+    - {{ pin_compatible('opencv', max_pin='x.x') }} # [not win]
+    - libopencv                                     # [win]
 
 test:
   requires:
