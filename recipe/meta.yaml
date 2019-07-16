@@ -11,7 +11,7 @@ source:
 
 build:
   number: 2
-  string: opencv_{{ opencv | replace(".", "") }}
+  string: opencv_{{ opencv | replace(".", "") }} # [not win]
   skip: true                        # [win and py27]
 
 requirements:
