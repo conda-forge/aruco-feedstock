@@ -66,17 +66,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015opencv3.4</td>
+              <td>win_c_compilervs2015cxx_compilervs2015</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015opencv3.4" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015opencv4.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7046&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015opencv4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aruco-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015" alt="variant">
                 </a>
               </td>
             </tr>
@@ -85,7 +78,12 @@ Current build status
       </details>
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+  <tr>
+    <td>Linux_ppc64le</td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
+    </td>
+  </tr>
 </table>
 
 Current release info
