@@ -8,6 +8,8 @@ package:
 source:
   url: https://downloads.sourceforge.net/project/aruco/{{ version }}/aruco-{{ version }}.zip
   sha256: 8d70856233f3271f672e8efa13ed83a9be30af357dca02220bcb329cb5fa9550
+  patches:
+    - fix_link.patch
 
 build:
   number: 3
