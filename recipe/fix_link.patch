@@ -1,0 +1,23 @@
+From 5a640c61ad16ff50a42fdb72b21b7bb8cc3780a7 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Fri, 5 Nov 2021 17:37:44 +0100
+Subject: [PATCH] Patch linking
+
+---
+ utils/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/utils/CMakeLists.txt b/utils/CMakeLists.txt
+index cbd19b5..3b39704 100644
+--- a/utils/CMakeLists.txt
++++ b/utils/CMakeLists.txt
+@@ -17,7 +17,7 @@ target_link_libraries(aruco_print_marker        aruco opencv_calib3d ${THREADLIB
+ target_link_libraries(aruco_simple              aruco opencv_calib3d ${THREADLIB})
+ target_link_libraries(aruco_test                aruco opencv_calib3d ${THREADLIB})
+ target_link_libraries(aruco_tracker             aruco opencv_calib3d ${THREADLIB})
+-target_link_libraries(aruco_batch_processing    aruco opencv_calib3d ${THREADLIB})
++target_link_libraries(aruco_batch_processing    aruco opencv_calib3d opencv_highgui ${THREADLIB})
+ 
+ #aruco_create_board
+ INSTALL(TARGETS aruco_batch_processing aruco_tracker aruco_simple aruco_test aruco_print_marker aruco_print_dictionary       RUNTIME DESTINATION bin)
+ 
