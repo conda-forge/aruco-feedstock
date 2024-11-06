@@ -10,7 +10,7 @@ source:
   sha256: 8d70856233f3271f672e8efa13ed83a9be30af357dca02220bcb329cb5fa9550
 
 build:
-  number: 2
+  number: 3
   string: opencv_{{ opencv | replace(".", "") }} # [not win]
   skip: true                        # [win and py27]
 
